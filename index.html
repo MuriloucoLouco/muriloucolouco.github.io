@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <title>Murilo Leandro</title>
+  <style>
+    @font-face {
+      font-family: dogica;
+      src: url(dogicabold.otf);
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      background-color: black;
+      color: #0F0;
+      font-family: dogica;
+      font-size: 10pt;
+      line-height: 13pt;
+    }
+    a, a:visited {
+      color: #0F0;
+      text-decoration: underline;
+    }
+    a:hover, a:active {
+      color: #0A0;
+    }
+    .header {
+      margin: 0 auto;
+      min-width: 0.5vh;
+      max-width: 400px;
+ 
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    .header > img {
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-crisp-edges;
+      image-rendering: -webkit-optimize-contrast;
+      -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: pixelated;
+      width: 100%;
+      height: auto;
+    }
+    .header > hr {
+      border: 1px solid #0f0;
+    }
+    .content {
+      width: 75%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .item {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    ::selection, ::-moz-selection {
+      color: black;
+      background: #0F0;
+    }
+
+    .espaco {
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <hr />
+    <img src="MURILO_verde.png" alt="Murilo">
+    <hr />
+  </div>
+  <div class="content">
+    <h1>Sobre mim:</h1>
+    <div class="item">
+      <p>
+        Estudante de programação sem nenhum rumo decidido.
+        Estudei programação web, com PHP ou frameworks JS, mas
+        não sou gosto de front-end, não sou designer. Prefiro
+        back-end.
+      </p>
+      <p>
+        Atualmente busco conhecimento em linguagens "compiláveis"
+        como C ou Go.
+      </p>
+      <p>
+        Também estou aprendendo hackearias, como engenharia
+        reversa, pentesting, etc.
+      </p>
+      <p>
+        <a
+          href="https://github.com/MuriloucoLouco"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+        meu github
+        </a>
+      </p>
+    </div>
+    <h1>Projetos:</h1>
+    <div class="item">
+      <h2>
+        <a
+          href="https://socialize-mlg.herokuapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Socialize
+        </a>
+      </h2>
+      <p>
+        Uma rede social escrita em nodejs, usando o express.js
+        com mongodb para a API rest, e react.js no front-end.
+      </p>
+    </div>
+    <div class="item">
+      <h2>
+        <a
+          href="http://batatismo.rf.gd/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Batatismo
+        </a>
+      </h2>
+      <p>
+        Um site em PHP que escrevi para postar memes,
+        foi o primeiro site que fiz.
+      </p>
+    </div>
+    <div class="item">
+      <h2>
+        <a
+          href="https://github.com/MuriloucoLouco/go-snake/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          go-snake
+        </a>
+      </h2>
+      <p>
+        Jogo da cobrinha escrito em go. Compilado tanto para
+        windows quanto linux. De longe, a coisa mais interessante
+        (e simples) que fiz.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
