@@ -1,0 +1,18 @@
+baseURL = 'https://muriloucolouco.github.io/'
+languageCode = 'pt-br'
+title = 'Site do Murilo'
+theme = 'poison'
+
+[params]
+	brand = "Murilouco"
+	description = "Um site sobre mim e minhas coisas."
+	dark_mode = true
+
+	menu = [
+		{Name = "Posts", URL = "/posts/", Pre = "Recent"},
+	]
+
+	github_url = "https://github.com/MuriloucoLouco"
+	rss_icon = true
+	rss_section = "posts"
+
