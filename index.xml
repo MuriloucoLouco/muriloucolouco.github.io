@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Site do Murilo</title>
+    <link>https://muriloucolouco.github.io/</link>
+    <description>Recent content on Site do Murilo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 13 Aug 2023 17:21:04 -0400</lastBuildDate><atom:link href="https://muriloucolouco.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Uma curta introdução à Teoria Quântica de Campos (TQC)</title>
+      <link>https://muriloucolouco.github.io/posts/qft/</link>
+      <pubDate>Sun, 13 Aug 2023 17:21:04 -0400</pubDate>
+      
+      <guid>https://muriloucolouco.github.io/posts/qft/</guid>
+      <description>Quantizando uma teoria clássica O próposito deste artigo é introduzir a TQC para quem já está familiarizado com a mecânica quântica tradicional e teoria dos campos lagrangianos.
+Primeiro, precisamos entender como surge a mecânica quântica a partir da mecânica clássica. Este processo é denominado quantização. O pressuposto básico é que, para sairmos do mundo clássico para o quântico, nós pegamos todos os valores físicos, como o momento $p$ ou a energia $E$, e transformamos em operadores quânticos: $\hat{p} = -i \hbar \nabla$ e $\hat{E}= i\hbar\frac{\partial}{\partial t}$.</description>
+    </item>
+    
+    <item>
+      <title>Introdução</title>
+      <link>https://muriloucolouco.github.io/posts/intro/</link>
+      <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://muriloucolouco.github.io/posts/intro/</guid>
+      <description>Bem vindo ao meu site! Aqui eu vou escrever textículos (textos curtos) sobre qualquer tópico que vier a minha cabeça. Coisas como programação, física, matemática, ou sei lá mais o quê.</description>
+    </item>
+    
+  </channel>
+</rss>
