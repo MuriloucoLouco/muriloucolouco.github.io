@@ -76,3 +76,41 @@ No caso, de forma similar ao $[\hat{x}, \hat{p}] = i\hbar $, se uma teoria é de
 $$[\hat{\phi}(t, x), \hat{\pi}(t, y)] = i\hbar \delta(x - y)$$
 
 Faz sentido: o $x$ é analogo ao $\phi(x)$ quando saímos da mecânica para a teoria dos campos, então $\hat{x}$ é analogo ao $\hat{\phi}(x)$. Da mesma forma, $\pi$ é o análogo do momento na teoria dos campos. O $\delta$ aqui nos diz que essas relações de comutação só existem caso estejam no mesmo ponto espacial. Se não, eles comutam normalmente como uma teoria clássica.
+
+## Mas afinal, cadê as partículas aí?
+
+"Uma partícula é uma excitação num campo quântico" é o que dizem. Mas a partícula não é descrita pelo estado quântico $|\psi\rangle$? Como pode ela ser então uma "excitação de um campo quântico", se o campo quântico é apenas um (campo de) operadores? Isso não seria como dizer que uma partícula é uma excitação do operador de momento? Onde que entra o estado quântico nessa brincadeira, se tudo que estudamos é a evolução do campo e não do estado?
+
+A resposta, de uma forma filosófica, é que as partículas são a síntese de uma relação dialética entre campos e estados. No caso, um não existe sobre o outro. Essa relação entre os dois nos permite duas possíveis visões sobre como interpretar a mecânica quântica:
+
+A que a maioria está acostumado é a representação de Schrödinger: os operadores são fixos no tempo, mas o estado se modifica ao longo do tempo. Se você estudou mecânica quântica, essa é a representação que usou, e sempre teve a imagem mental de uma onda no espaço viajando e ondulando de acordo com a equação de Schrödinger.
+
+Porém, existe outra representação: a representação de Heisenberg, onde o estado quântico é constante, e quem muda com o tempo são os operadores. É basicamente o que nós estamos fazendo na TQC: nós temos um campo quântico de operadores que evoluem com o tempo, e essa evolução é ditada pelo lagrangiano. 
+
+De um ponto de vista matemático funciona da seguinte forma: o valor esperado de um operador em um estado quântico em determinado momento é dado por:
+
+$$ \langle \psi(t) | \hat{O} | \psi(t) \rangle $$
+
+Porém, o estado quântico em um tempo $t$ pode ser descrito como o estado original $\psi(0)$, e nele aplicado o operador de evolução de tempo:
+
+$$ \psi(t) = \hat{U}(t)\psi(0) $$
+
+Logo, o mesmo valor esperado pode ser escrito como:
+
+$$ \langle \psi(0) | \hat{U}^\dagger(t) \hat{O} \hat{U}(t) | \psi(0) \rangle $$
+
+As duas interpretações surgem de como isolamos cada termo. Na representação de Schrödinger, o operador de evolução de tempo é aplicado nos estados:
+
+$$ [\langle \psi(0) | \hat{U}^\dagger(t)] \hat{O} [\hat{U}(t) | \psi(0) \rangle] = \langle \psi(t) | \hat{O} | \psi(t) \rangle$$
+
+Porém, eles podem ser absorvidos pelo operador, tornando ele dependente do tempo, o estado é fixo ($\psi(0)$):
+
+$$ \langle \psi(0) | [\hat{U}^\dagger(t) \hat{O} \hat{U}(t)] | \psi(0) \rangle = \langle \psi(0) | \hat{O}(t) | \psi(0) \rangle$$
+
+## Leia mais:
+
+Sobre essa questão do o estado e campo quântico representam: 
+
+Dois ótimos livros: 
+- Quantum Field Theory for the Gifted Amateur, Lancaster
+- An Introduction To Quantum Field Theory, Peskin & Schroeder
