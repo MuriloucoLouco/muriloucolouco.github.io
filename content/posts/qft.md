@@ -6,7 +6,7 @@ draft: false
 
 ## Quantizando uma teoria clássica
 
-O próposito deste artigo é introduzir a TQC para quem já está familiarizado com a mecânica quântica tradicional e teoria dos campos lagrangianos.
+O propósito deste artigo é introduzir a TQC para quem já está familiarizado com a mecânica quântica tradicional e teoria dos campos lagrangianos.
 
 Primeiro, precisamos entender como surge a mecânica quântica a partir da mecânica clássica. Este processo é denominado quantização. O pressuposto básico é que, para sairmos do mundo clássico para o quântico, nós pegamos todos os valores físicos, como o momento $p$ ou a energia $E$, e transformamos em operadores quânticos: $\hat{p} = -i \hbar \nabla$ e $\hat{E}= i\hbar\frac{\partial}{\partial t}$.
 
@@ -27,7 +27,7 @@ Chamada de relação de comutação canônica. De forma resumida, nós começamo
 
 ## Lagrangianos
 
-Na mecânica clássica, um sistema mecânico é determinado por um lagrangiano $L$ e um espaço de configuração, que são os parâmetros que determinam o sistema. Por exemplo, num sistema dinâmico que analise o movimento de uma partícula de massa $m$, os parâmetros são suas coordenadas no espaço, e o lagrangiano é:
+Na mecânica clássica, um sistema mecânico é determinado por um lagrangiano $L$ e um espaço de configuração $q_1, q_2, \ldots$, que são os parâmetros que determinam o sistema. Por exemplo, num sistema dinâmico que analise o movimento de uma partícula de massa $m$, os parâmetros são suas coordenadas no espaço, e o lagrangiano é:
 
 $$L = T - V$$
 
@@ -35,21 +35,23 @@ Onde $T$ é a energia cinética (função da variação da coordenada espacial):
 
 $$T = \frac{1}{2}m (\frac{\partial x}{\partial t})^2$$
 
-E $V$ é a energia potencial. Num espaço livre, o potencial é nulo, mas poderia ser o potencial gravitacional (função da coordenada espacial).
+E $V$ é a energia potencial. Num espaço livre, o potencial é nulo, mas poderia ser o potencial gravitacional ou qualquer outra coisa (função da coordenada espacial).
 
-Mas o lagrangiano por si só não faz nada. O lagrangiano atua como uma "lei da física" que está sendo analisada, ele o fundamento de tudo que está sendo estudado. Para completarmos a teoria, aplicamos o princípio da mínima ação, que diz que a ação $S = \int L dt$ deve ser mínimo: $\delta S = 0$.
+Mas o lagrangiano por si só não faz nada, é apenas um número. Para completarmos a teoria, aplicamos o princípio da mínima ação, que diz que a ação $S = \int L dt$ deve ser mínima: $\delta S = 0$. Se expandir $\delta S = 0$, obterá a equação de Euler-Lagrange:
 
-Ou seja, um lagrangiano compila todas as leis da física em uma única coisa, e a maneira que pegamos essas leis é resolvendo $\delta S = 0$.
+$$ \frac{\partial L}{\partial q_i} = \frac{d}{dt}\frac{\partial L}{\partial \dot{q_i}}$$
+
+Ou seja, um lagrangiano compila todas as leis da física em uma única coisa, e a maneira que pegamos essas leis é resolvendo $\delta S = 0$. (Tanto que você pode pesquisar na internet "lagrangiano do modelo padrão" e encontrará um lagrangiano gigantesco, que basicamente compila todo o conhecimento que temos da física, excluindo a gravitação).
 
 Ainda neste tópico, é bom lembrar da existência do momento, e como adquirimos ele de um lagrangiano. Se pegarmos o exemplo do lagrangiano da partícula livre acima $L = \frac{1}{2}m \dot{x}^2$, (onde $\dot{x} = \frac{\partial x}{\partial t}$, a velocidade), e derivarmos $L$ em função de $\dot{x}$ temos:
 
 $$ \frac{\partial L}{\partial \dot{x}} = m\dot{x}$$
 
-Porém $m\dot{x}$ é exatamente o momento. Então, faz sentido dizer que se $q$ é o parametro de uma teoria lagrangiana, então $\frac{\partial L}{\partial \dot{q}}$ é o momento dessa teoria.
+Porém $m\dot{x}$ é exatamente o momento. Então, faz sentido dizer que se $q$ é o parametro de uma teoria lagrangiana, então $\frac{\partial L}{\partial \dot{q}}$ é o momento dessa teoria. Outros valores análogos também podem ser adquiridos do lagrangiano, mas aqui só é relevante o momento.
 
 ## Teoria dos campos
 
-A teoria dos campos pode ser tratada da mesma forma. Antes, o lagrangiano dependia de um número finito de parametros, ou os "graus de liberdade" do sistema. Por exemplo, a posição espacial. Agora, ao invés dessas posições espaciais (ou qualquer outro parâmetro), nós lidamos com infinitos parâmetros, que são os $\phi(x)$, um "parâmetro" para cada lugar no universo, o campo. Esse parâmetro pode ser um único número (um campo escalar), ou vários números (um campo vetorial), ou até mesmo um campo tensorial, se você está familiarizado com eles.
+A teoria dos campos pode ser tratada da mesma forma. Antes, o lagrangiano dependia de um número finito de parametros ($q_1, q_2, \ldots$), ou os "graus de liberdade" do sistema. Por exemplo, a posição espacial. Agora, ao invés dessas posições espaciais (ou qualquer outro parâmetro), nós lidamos com infinitos parâmetros, que são os $\phi(x)$, um "parâmetro" para cada lugar no universo, o campo. Esses parâmetros podem ser um único número (um campo escalar), ou vários números (um campo vetorial), ou até mesmo um campo tensorial, se você está familiarizado com eles.
 
 Numa teoria dos campos, o lagrangiano é $L = \int$ 𝓛 $dx$. 𝓛 é a densidade lagrangiana do sistema, e geralmente usamos ela no lugar do lagrangiano (já que para o obter o lagrangiano de fato é apenas uma integral sobre todo o espaço de 𝓛). Como este websítio que eu estou usando não suporta essa letra (𝓛) no meio do LaTeX, eu vou simplesmente usar a letra $L$ como densidade lagrangiana daqui em diante. Isto também é feito por livros, então não é tão anormal.
 
@@ -106,6 +108,8 @@ $$ [\langle \psi(0) | \hat{U}^\dagger(t)] \hat{O} [\hat{U}(t) | \psi(0) \rangle]
 Porém, eles podem ser absorvidos pelo operador, tornando ele dependente do tempo, o estado é fixo ($\psi(0)$):
 
 $$ \langle \psi(0) | [\hat{U}^\dagger(t) \hat{O} \hat{U}(t)] | \psi(0) \rangle = \langle \psi(0) | \hat{O}(t) | \psi(0) \rangle$$
+
+Resta ainda visualizar e pegar os lagrangianos desta teoria de campos. Afinal, até agora tudo que aprendemos é que ao invés de usar um número finito de operadores como na física quântica clássica (por exemplo, um estado quântico descrito por duas partículas seria função de duas coordenadas espaciais, teriamos dois operadores de momento, etc.), nós queremos uma teoria de campos que tenha infinitos operadores, um para cada ponto espacial.
 
 ## Leia mais:
 
