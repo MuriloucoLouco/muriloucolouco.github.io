@@ -39,11 +39,14 @@
 
 
   
+ 
+
+ 
+
+
   
- 
-
- 
-
+  
+  
  
 
 
@@ -57,25 +60,25 @@
 
 
 
-<title itemprop="name">Murilouco</title>
-<meta property="og:title" content=Murilouco />
-<meta name="twitter:title" content=Murilouco />
-<meta itemprop="name" content=Murilouco />
-<meta name="application-name" content=Murilouco />
+<title itemprop="name">Murilouco - Uma visualização dos campos quânticos e como obter suas fórmulas</title>
+<meta property="og:title" content=Murilouco&#32;-&#32;Uma&#32;visualização&#32;dos&#32;campos&#32;quânticos&#32;e&#32;como&#32;obter&#32;suas&#32;fórmulas />
+<meta name="twitter:title" content=Murilouco&#32;-&#32;Uma&#32;visualização&#32;dos&#32;campos&#32;quânticos&#32;e&#32;como&#32;obter&#32;suas&#32;fórmulas />
+<meta itemprop="name" content=Murilouco&#32;-&#32;Uma&#32;visualização&#32;dos&#32;campos&#32;quânticos&#32;e&#32;como&#32;obter&#32;suas&#32;fórmulas />
+<meta name="application-name" content=Murilouco&#32;-&#32;Uma&#32;visualização&#32;dos&#32;campos&#32;quânticos&#32;e&#32;como&#32;obter&#32;suas&#32;fórmulas />
 <meta property="og:site_name" content="Site do Murilo" />
 
 
-<meta name="description" content="Um site sobre mim e minhas coisas." />
-<meta itemprop="description" content="Um site sobre mim e minhas coisas." />
-<meta property="og:description" content="Um site sobre mim e minhas coisas." />
-<meta name="twitter:description" content="Um site sobre mim e minhas coisas." />
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
 
 
-<base href="https://muriloucolouco.github.io/" />
-<link rel="canonical" href="https://muriloucolouco.github.io/" itemprop="url" />
-<meta name="url" content="https://muriloucolouco.github.io/" />
-<meta name="twitter:url" content="https://muriloucolouco.github.io/" />
-<meta property="og:url" content="https://muriloucolouco.github.io/" />
+<base href="https://muriloucolouco.github.io/posts/qft2/" />
+<link rel="canonical" href="https://muriloucolouco.github.io/posts/qft2/" itemprop="url" />
+<meta name="url" content="https://muriloucolouco.github.io/posts/qft2/" />
+<meta name="twitter:url" content="https://muriloucolouco.github.io/posts/qft2/" />
+<meta property="og:url" content="https://muriloucolouco.github.io/posts/qft2/" />
 
 
 
@@ -85,7 +88,6 @@
 
 
 <link rel="sitemap" type="application/xml" title="Sitemap" href='https://muriloucolouco.github.io/sitemap.xml' />
-<link href="https://muriloucolouco.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Site do Murilo" />
 
 <meta name="robots" content="index,follow" />
 <meta name="googlebot" content="index,follow" />
@@ -104,36 +106,43 @@
 
 
 
+ 
 
-<meta property="og:type" content="website" />
-<meta name="author" content="" />
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="" />
+<meta property="og:article:published_time" content=14008-14-09T824:53:23-0400 />
+<meta property="article:published_time" content=14008-14-09T824:53:23-0400 />
+
+
+
+
+
 <script defer type="application/ld+json">
   {
-    {
-        "@context": "http://schema.org",
-        "@type": "Article",
-        "headline": "Site do Murilo",
-        "author": {
-            "@type": "Person",
-            "name": ""
-        },
-        "datePublished": "2023-08-14",
-        "description": "",
-        "wordCount":  0 ,
-        "mainEntityOfPage": "True",
-        "dateModified": "2023-08-14",
-        "image": {
-            "@type": "imageObject",
-            "url": ""
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Site do Murilo",
-            "logo": {
-            "@type": "imageObject",
-            "url": ""
-            }
-        }
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Uma visualização dos campos quânticos e como obter suas fórmulas",
+    "author": {
+      "@type": "Person",
+      "name": "https:\/\/github.com\/MuriloucoLouco"
+    },
+    "datePublished": "2023-08-14",
+    "description": "",
+    "wordCount":  543 ,
+    "mainEntityOfPage": "True",
+    "dateModified": "2023-08-14",
+    "image": {
+      "@type": "imageObject",
+      "url": ""
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Site do Murilo",
+      "logo": {
+        "@type": "imageObject",
+        "url": ""
+      }
     }
   }
 </script>
@@ -289,10 +298,8 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </aside>
 
             <main class="content container">
-                <div class="posts">
-    
-    <article class="post">
-        <div class="info">
+                <div class="post">
+  <div class="info">
     <h1 class="post-title">
         <a href="https://muriloucolouco.github.io/posts/qft2/">Uma visualização dos campos quânticos e como obter suas fórmulas</a>
     </h1>
@@ -309,66 +316,60 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
     
 </div>
 
-        Osciladores harmônicos quânticos Comecemos com um problema da mecânica clássica: o Oscilador Harmônico Quântico. Aqui, temos um oscilador harmônico simples (a famosa mola com F = -kx), só que quantizado. O parâmetro desta teoria será o $\hat{x}$ (escreverei apenas $x$ para não conflitar com o $\dot{x}$ que é a velocidade) representando o deslocamento do oscilador. Livros normalmente usam $\hat{q}$, mas quero que esse texto seja condizente com o post anterior. O hamiltoniano é dado por:
+  <h2 id="osciladores-harmônicos-quânticos">Osciladores harmônicos quânticos</h2>
+<p>Comecemos com um problema da mecânica clássica: o Oscilador Harmônico Quântico. Aqui, temos um oscilador harmônico simples (a famosa mola com F = -kx), só que quantizado. O parâmetro desta teoria será o $\hat{x}$ (escreverei apenas $x$ para não conflitar com o $\dot{x}$ que é a velocidade) representando o deslocamento do oscilador. Livros normalmente usam $\hat{q}$, mas quero que esse texto seja condizente com o post anterior. O hamiltoniano é dado por:</p>
+<p>$$ \hat{H} = \frac{1}{2}m\dot{x}^2 + \frac{1}{2}\kappa x^2$$</p>
+<p>O primeiro termo é a energia cinética usual e o segundo a energia potencial elástica, que também pode ser escrito como $\frac{1}{2}m\omega^2 x^2$, onde $\omega = \sqrt{\kappa/m}$. Se você estudou mecânica quântica, e eu estou presumindo que sim, sabe que os auto-estados $\psi_n$ da equação $\hat{H}|\psi\rangle = E|\psi\rangle$ é dado por uma fórmula maluca e complexa que raramente é derivada nos livros:</p>
+<p>$$ \psi_n = \frac{1}{\sqrt{2^n n!}} (\frac{m\omega}{\pi\hbar})^{1/4} e^{-\frac{m\omega x^2}{2\hbar}} H_n(\sqrt{\frac{m\omega}{\hbar}}x) $$</p>
+<p>onde $H_n$ são os polinômios de Hermite. Também não me darei ao trabalho de derivar ela, mas ela é importante na hora de computar numericamente os valores do estado. Este trabalho porém residirá apenas à mim.</p>
+<p>Válido lembrar também que utilizando os operadores de criação e aniquilação que são definidos por:</p>
+<p>$$ a = \sqrt{\frac{m\omega}{2\hbar}}(\hat{x} + \frac{i}{m\omega}\hat{p}) $$
+$$ a^\dagger = \sqrt{\frac{m\omega}{2\hbar}}(\hat{x} - \frac{i}{m\omega}\hat{p}) $$</p>
+<p>E portanto permitem escrever o hamiltoniano de forma muito mais elegante:</p>
+<p>$$ \hat{H} = \hbar\omega(a^\dagger a + \frac{1}{2})$$</p>
+<p>E que se $\hat{H}\psi = E\psi$, então $\hat{H}(a^\dagger\psi) = (E + \hbar\omega)\psi$, ou seja, $a^\dagger$ cria um &ldquo;pacote de energia&rdquo; de $\hbar\omega$. Similarmente, $a$ remove o &ldquo;pacote de energia&rdquo; do estado. Outra forma de dizer isso de forma mais inequívoca é que $\psi_n = c_n (a^\dagger)^n\psi_0$ (onde $c_n$ é apenas uma constante de normalização).</p>
+<p>Fazendo um gráfico do de $\psi_1$, por exemplo, temos:</p>
+<p><img src="/qft2/eigenstate.png" alt="Gráfico 1"></p>
+<p>Porém, podemos representar tudo em uma única linha, usando cores ao invés de altura para representar o valor de $\psi_1$. Também rotacionei por 90 graus, pois será útil no futuro. Note também que eu não coloquei a cor para todos os pontos da linha, mas para um monte de pontos aleatórios uniformemente distribuídos na linha. Isso será útil no futuro também.</p>
+<p><img src="/qft2/eigenstateline.png" alt="Gráfico 2"></p>
+<h2 id="generalizando">Generalizando</h2>
+<p>Agora vamos supor dois osciladores harmônicos. Nosso estado dependerá de dois parâmetros agora, um para cada oscilador: $x_1, x_2$. Por hora, assumiremos que esses osciladores não interagem entre si. O hamiltoniano é:</p>
+<p>$$ \hat{H} = \sum_{n=1,2} \frac{1}{2}m\dot{x_n}^2 + \frac{1}{2}\kappa x_n^2 $$</p>
+<p>Claro que esse hamiltoniano será generalizado para $N$ osciladores no futuro, mas ainda quero apenas olhar no caso $N=2$ pelos gráficos. Um fato interessante é que por não interagirem entre si, o auto-estado onde um deles é $\psi_{\nu_1}$ e outro $\psi_{\nu_2}$ é:</p>
+<p>$$ \psi_{\nu_1, \nu_2} = \psi_{\nu_1}\psi_{\nu_2} $$</p>
+<p>Usando o mesmo método de pontos, como agora temos dois parâmetros vou colocar cada ponto não numa reta como antes, mas num retângulo, e a cor do ponto ainda representa a intensidade de $\psi$. Por exemplo, no caso $\psi_{1, 2}$, o gráfico fica:</p>
+<p><img src="/qft2/eigenstateplane.png" alt="Gráfico 3"></p>
+<p>Outra possível representação, é ao invés de representar os parâmetros $\vec{x} = (x_1, x_2)$ como um ponto num espaço, podemos ter um eixo paralelo para cada parâmetro, e uma linha que conecte os dois pontos em cada eixo. Por exemplo, o ponto $\vec{x} = (0.5, -0.2)$ seria desenhado assim:</p>
+
+  <hr>
+<div class="footer">
+    
+	    
+            <a class="previous-post" href="https://muriloucolouco.github.io/posts/qft/?ref=footer"><span style="font-weight:bold;">« Previous</span><br>Uma curta introdução à Teoria Quântica de Campos...</a>
         
-        <div class="read-more-link">
-            <a href="/posts/qft2/">Read More…</a>
-        </div>
-        
-    </article>
-    <article class="post">
-        <div class="info">
-    <h1 class="post-title">
-        <a href="https://muriloucolouco.github.io/posts/qft/">Uma curta introdução à Teoria Quântica de Campos (TQC)</a>
-    </h1>
-    
-        <time datetime="2023-08-13T17:21:04-0400" class="post-date">
-            August 13, 2023
-        </time>
-    
-    
-    
-    
-    
-    
+	    
     
 </div>
 
-        Quantizando uma teoria clássica O propósito deste artigo é introduzir a TQC para quem já está familiarizado com a mecânica quântica tradicional e teoria dos campos lagrangianos.
-Primeiro, precisamos entender como surge a mecânica quântica a partir da mecânica clássica. Este processo é denominado quantização. O pressuposto básico é que, para sairmos do mundo clássico para o quântico, nós pegamos todos os valores físicos, como o momento $p$ ou a energia $E$, e transformamos em operadores quânticos: $\hat{p} = -i \hbar \nabla$ e $\hat{E}= i\hbar\frac{\partial}{\partial t}$.
-        
-        <div class="read-more-link">
-            <a href="/posts/qft/">Read More…</a>
-        </div>
-        
-    </article>
-    <article class="post">
-        <div class="info">
-    <h1 class="post-title">
-        <a href="https://muriloucolouco.github.io/posts/intro/">Introdução</a>
-    </h1>
-    
-        <time datetime="2023-08-13T00:00:00Z" class="post-date">
-            August 13, 2023
-        </time>
-    
-    
-    
-    
-    
-    
-    
+  
 </div>
-
-        Bem vindo ao meu site! Aqui eu vou escrever textículos (textos curtos) sobre qualquer tópico que vier a minha cabeça. Coisas como programação, física, matemática, ou sei lá mais o quê.
-        
-    </article>
-</div>
-
-
-
             </main>
             
+  
+    <div class="article-toc ">
+    <div class="toc-wrapper">
+      <h4 id="contents"></h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#osciladores-harmônicos-quânticos">Osciladores harmônicos quânticos</a></li>
+    <li><a href="#generalizando">Generalizando</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+  
+
         </div>
     </body>
 </html>

@@ -6,14 +6,23 @@
     <description>Recent content on Site do Murilo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 13 Aug 2023 17:21:04 -0400</lastBuildDate><atom:link href="https://muriloucolouco.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Aug 2023 21:24:53 -0400</lastBuildDate><atom:link href="https://muriloucolouco.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Uma visualização dos campos quânticos e como obter suas fórmulas</title>
+      <link>https://muriloucolouco.github.io/posts/qft2/</link>
+      <pubDate>Mon, 14 Aug 2023 21:24:53 -0400</pubDate>
+      
+      <guid>https://muriloucolouco.github.io/posts/qft2/</guid>
+      <description>Osciladores harmônicos quânticos Comecemos com um problema da mecânica clássica: o Oscilador Harmônico Quântico. Aqui, temos um oscilador harmônico simples (a famosa mola com F = -kx), só que quantizado. O parâmetro desta teoria será o $\hat{x}$ (escreverei apenas $x$ para não conflitar com o $\dot{x}$ que é a velocidade) representando o deslocamento do oscilador. Livros normalmente usam $\hat{q}$, mas quero que esse texto seja condizente com o post anterior. O hamiltoniano é dado por:</description>
+    </item>
+    
     <item>
       <title>Uma curta introdução à Teoria Quântica de Campos (TQC)</title>
       <link>https://muriloucolouco.github.io/posts/qft/</link>
       <pubDate>Sun, 13 Aug 2023 17:21:04 -0400</pubDate>
       
       <guid>https://muriloucolouco.github.io/posts/qft/</guid>
-      <description>Quantizando uma teoria clássica O próposito deste artigo é introduzir a TQC para quem já está familiarizado com a mecânica quântica tradicional e teoria dos campos lagrangianos.
+      <description>Quantizando uma teoria clássica O propósito deste artigo é introduzir a TQC para quem já está familiarizado com a mecânica quântica tradicional e teoria dos campos lagrangianos.
 Primeiro, precisamos entender como surge a mecânica quântica a partir da mecânica clássica. Este processo é denominado quantização. O pressuposto básico é que, para sairmos do mundo clássico para o quântico, nós pegamos todos os valores físicos, como o momento $p$ ou a energia $E$, e transformamos em operadores quânticos: $\hat{p} = -i \hbar \nabla$ e $\hat{E}= i\hbar\frac{\partial}{\partial t}$.</description>
     </item>
     
