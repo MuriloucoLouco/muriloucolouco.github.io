@@ -67,7 +67,7 @@ Também de forma análoga à mecânica, onde a derivada do lagrangiano em relaç
 
 $$\pi(x) = \frac{\partial L}{\partial \dot{\phi}}$$
 
-Pode ser chamado de momento. No caso, ele é chamado de "momento conjugado". Se generalizarmos essa definição para derivadas não só em respeito ao tempo, mas para qualquer coordenada do espaço-tempo, tempo a densidade de momento $\Pi^\mu$, e $\pi = \Pi^0$ pois a coordenada do tempo é a coordenada zero.
+Pode ser chamado de momento. No caso, ele é chamado de "momento conjugado". Se generalizarmos essa definição para derivadas não só em respeito ao tempo, mas para qualquer coordenada do espaço-tempo, temos a densidade de momento $\Pi^\mu$, e $\pi = \Pi^0$ pois a coordenada do tempo é a coordenada zero.
 
 ## Quantizando uma teoria de campos
 
