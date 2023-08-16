@@ -67,7 +67,7 @@ Também de forma análoga à mecânica, onde a derivada do lagrangiano em relaç
 
 $$\pi(x) = \frac{\partial L}{\partial \dot{\phi}}$$
 
-Pode ser chamado de momento. No caso, ele é chamado de "momento conjugado". Se generalizarmos essa definição para derivadas não só em respeito ao tempo, mas para qualquer coordenada do espaço-tempo, tempo a densidade de momento $\Pi^\mu$, e $\pi = \Pi^0$ pois a coordenada do tempo é a coordenada zero.
+Pode ser chamado de momento. No caso, ele é chamado de "momento conjugado". Se generalizarmos essa definição para derivadas não só em respeito ao tempo, mas para qualquer coordenada do espaço-tempo, temos a densidade de momento $\Pi^\mu$, e $\pi = \Pi^0$ pois a coordenada do tempo é a coordenada zero.
 
 ## Quantizando uma teoria de campos
 
@@ -110,8 +110,6 @@ Porém, eles podem ser absorvidos pelo operador, tornando ele dependente do temp
 $$ \langle \psi(0) | [\hat{U}^\dagger(t) \hat{O} \hat{U}(t)] | \psi(0) \rangle = \langle \psi(0) | \hat{O}(t) | \psi(0) \rangle$$
 
 Resta ainda visualizar e pegar os lagrangianos desta teoria de campos. Afinal, até agora tudo que aprendemos é que ao invés de usar um número finito de operadores como na física quântica clássica (por exemplo, um estado quântico descrito por duas partículas seria função de duas coordenadas espaciais, teriamos dois operadores de momento, etc.), nós queremos uma teoria de campos que tenha infinitos operadores, um para cada ponto espacial.
-
-Você descobrirá que as
 
 ## Leia mais:
 
