@@ -14,7 +14,7 @@
       
       <guid>https://muriloucolouco.github.io/posts/qft2/</guid>
       <description>Todos os creditos para Helmut Linde, que escreveu o excelente artigo (arXiv:1907.11311) do qual baseei todo esse texto.
-Osciladores harmônicos quânticos Comecemos com um problema da mecânica clássica: o Oscilador Harmônico Quântico (OHQ). Aqui, temos um oscilador harmônico simples (a famosa mola com F = -kx), só que quantizado. O parâmetro desta teoria será o $\hat{x}$ (escreverei apenas $x$ para não conflitar com o $\dot{x}$ que é a velocidade) representando o deslocamento do oscilador.</description>
+Osciladores harmônicos quânticos Comecemos com um problema da mecânica clássica: o Oscilador Harmônico Quântico (OHQ). Aqui, temos um oscilador harmônico simples (a famosa mola com F = -kx), só que quantizado. O parâmetro desta teoria será o $\hat{x}$ representando o deslocamento do oscilador. Livros normalmente usam $\hat{q}$, mas quero que esse texto seja condizente com o post anterior.</description>
     </item>
     
     <item>
