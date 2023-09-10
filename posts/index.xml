@@ -6,7 +6,43 @@
     <description>Recent content in Posts on Site do Murilo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 14 Aug 2023 21:24:53 -0400</lastBuildDate><atom:link href="https://muriloucolouco.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Sep 2023 19:50:34 -0400</lastBuildDate><atom:link href="https://muriloucolouco.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Computando geodésicas com python</title>
+      <link>https://muriloucolouco.github.io/posts/geodesics/</link>
+      <pubDate>Sat, 09 Sep 2023 19:50:34 -0400</pubDate>
+      
+      <guid>https://muriloucolouco.github.io/posts/geodesics/</guid>
+      <description>Este post é uma continuação do anterior.
+Geodésicas A equação geral é dada por:
+$$ \frac{\partial^2 \gamma^\mu}{\partial t^2} - \sum_{\alpha, \beta} \Gamma^\mu_{\alpha \beta} \frac{\partial \gamma^\alpha}{\partial t}\frac{\partial \gamma^\beta}{\partial t} = 0$$
+Onde $\gamma: I \to M$ é a curva geodésica na variedade $M$, e cada índice se refere a uma coordenada da variedade (i.e, $\gamma(t) = (\gamma^0(t), \gamma^1(t), \ldots)$). $\Gamma^\mu_{\alpha \beta}$ são os símbolos de christoffel daquela variedade, especificando sua curvatura.</description>
+    </item>
+    
+    <item>
+      <title>Resolvendo Equações Diferenciais com python</title>
+      <link>https://muriloucolouco.github.io/posts/eqdiff/</link>
+      <pubDate>Tue, 05 Sep 2023 18:50:58 -0400</pubDate>
+      
+      <guid>https://muriloucolouco.github.io/posts/eqdiff/</guid>
+      <description>Recomendo que tenha um conhecimento básico de análise numérica ou leia o post anterior.
+Neste post vou mostrar como se resolve uma equação diferencial com python. Apesar de ser importante saber como faz manualmente os métodos numericos do post anterior, na prática as pessoas apenas usam bibliotecas que fazem tudo isso de forma muito mais eficiente que você jamais consegueria chegar sozinho.
+Primeira ordem Primeiro, com equações diferenciais de primeira ordem, a mais simples de todas é:</description>
+    </item>
+    
+    <item>
+      <title>Cálculo numérico 101</title>
+      <link>https://muriloucolouco.github.io/posts/numerical/</link>
+      <pubDate>Sun, 20 Aug 2023 21:01:40 -0400</pubDate>
+      
+      <guid>https://muriloucolouco.github.io/posts/numerical/</guid>
+      <description>Neste post iremos adentrar um pouco no cálculo numérico. Sabe, você não vai calcular integral na mão toda a vez. Na verdade, muitas das vezes é impossível, e mesmo quando é possível, não ajuda muito.
+É muito simples na verdade.
+Derivadas A derivada de uma função $f(x)$ é definida como:
+$$ f&#39;(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} $$
+Basicamente, o $\frac{\Delta y}{\Delta x} $ com a diferença tendendo a zero. Mas, um computador não consegue calcular limites pois é incapaz de compreender infinito.</description>
+    </item>
+    
     <item>
       <title>Uma visualização dos campos quânticos e como obter suas fórmulas</title>
       <link>https://muriloucolouco.github.io/posts/qft2/</link>
@@ -33,7 +69,7 @@ Primeiro, precisamos entender como surge a mecânica quântica a partir da mecâ
       <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://muriloucolouco.github.io/posts/intro/</guid>
-      <description>Bem vindo ao meu site! Aqui eu vou escrever textículos (textos curtos) sobre qualquer tópico que vier a minha cabeça. Coisas como programação, física, matemática, ou sei lá mais o quê.</description>
+      <description>Bem vindo ao meu site! Aqui eu vou escrever textos sobre qualquer tópico que vier a minha cabeça. Coisas como programação, física, matemática, ou sei lá mais o quê.</description>
     </item>
     
   </channel>

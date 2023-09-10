@@ -2,11 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://muriloucolouco.github.io/posts/geodesics/</loc>
+    <lastmod>2023-09-09T19:50:34-04:00</lastmod>
+  </url><url>
     <loc>https://muriloucolouco.github.io/posts/</loc>
-    <lastmod>2023-08-14T21:24:53-04:00</lastmod>
+    <lastmod>2023-09-09T19:50:34-04:00</lastmod>
   </url><url>
     <loc>https://muriloucolouco.github.io/</loc>
-    <lastmod>2023-08-14T21:24:53-04:00</lastmod>
+    <lastmod>2023-09-09T19:50:34-04:00</lastmod>
+  </url><url>
+    <loc>https://muriloucolouco.github.io/posts/eqdiff/</loc>
+    <lastmod>2023-09-05T18:50:58-04:00</lastmod>
+  </url><url>
+    <loc>https://muriloucolouco.github.io/posts/numerical/</loc>
+    <lastmod>2023-08-20T21:01:40-04:00</lastmod>
   </url><url>
     <loc>https://muriloucolouco.github.io/posts/qft2/</loc>
     <lastmod>2023-08-14T21:24:53-04:00</lastmod>
