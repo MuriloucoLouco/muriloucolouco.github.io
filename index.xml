@@ -6,7 +6,21 @@
     <description>Recent content on Site do Murilo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 09 Sep 2023 19:50:34 -0400</lastBuildDate><atom:link href="https://muriloucolouco.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Oct 2023 00:12:42 -0400</lastBuildDate><atom:link href="https://muriloucolouco.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sobre uma questão da OBMEP</title>
+      <link>https://muriloucolouco.github.io/posts/obmep/</link>
+      <pubDate>Sun, 08 Oct 2023 00:12:42 -0400</pubDate>
+      
+      <guid>https://muriloucolouco.github.io/posts/obmep/</guid>
+      <description>As regras Não lembro direito de como estava escrito, mas vai mais ou menos assim:
+Você quer pintar todos os números inteiros de preto ou branco
+Regra 1: $n$ e $n+5$ devem ter a mesma cor.
+Regra 2: Se $n = ab$ ($a, b$ inteiros) for branco, então pelo menos um dos fatores ($a, b$) também serão brancos.
+A questão pedia três coisas:
+a) prove que se $38$ for branco, então $3$ também será.</description>
+    </item>
+    
     <item>
       <title>Computando geodésicas com python</title>
       <link>https://muriloucolouco.github.io/posts/geodesics/</link>
