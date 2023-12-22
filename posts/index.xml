@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Site do Murilo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 08 Oct 2023 00:12:42 -0400</lastBuildDate><atom:link href="https://muriloucolouco.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Dec 2023 10:46:10 -0400</lastBuildDate><atom:link href="https://muriloucolouco.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Uma análise estatística do ENEM</title>
+      <link>https://muriloucolouco.github.io/posts/enem/</link>
+      <pubDate>Fri, 22 Dec 2023 10:46:10 -0400</pubDate>
+      
+      <guid>https://muriloucolouco.github.io/posts/enem/</guid>
+      <description>Como o TRI funciona? Primeiro, resumindo como o TRI funciona: cada questão possui três parâmetros $a$, $b$ e $c$. O aluno também terá um número $\theta$ associado com sua habilidade no que a questão pede. Elas juntas formam uma curva logística que descreve a probabilidade do candidato acertar a questão dada sua habilidade:
+$$ P(acertar | \theta) = c + \frac{(1-c)}{1+\exp[-a(\theta-b)]} $$
+O parâmetro $a$ é o de discriminação, ela determina o quão bom é essa questão em separar alunos que sabem ($P \approx 1$) e os que não sabem ($P \approx 0$).</description>
+    </item>
+    
     <item>
       <title>Sobre uma questão da OBMEP</title>
       <link>https://muriloucolouco.github.io/posts/obmep/</link>
