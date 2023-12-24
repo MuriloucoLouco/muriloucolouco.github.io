@@ -66,6 +66,8 @@ Então $E(\theta | x, \eta) \approx 0.3$, e a minha nota será $530$. Se eu acer
 
 ![notas](/enem/notas.png)
 
+(Caso você seja uma pessoa infeliz que não entendeu o que eu disse, pode ler o próprio artigo do INEP que fala a mesma coisa que eu: https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/enem_procedimentos_de_analise.pdf)
+
 ## Estimando notas
 
 Quero estimar minha nota do ENEM. Problema: é impossível eu obter os parâmetros de cada questão para eu calcular. Apesar disso, é fato que em geral as notas do ENEM por pontuação são mais ou menos consistentes: uma pessoa que acerta $30$ questões em humanas vai tirar $600 - 700$.
