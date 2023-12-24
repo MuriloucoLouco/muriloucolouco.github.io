@@ -19,4 +19,3 @@ theme = 'poison'
 [services]
 	[services.disqus]
 		shortname = 'murilouco-louco'
-
