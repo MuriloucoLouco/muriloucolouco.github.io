@@ -16,3 +16,7 @@ theme = 'poison'
 	rss_icon = true
 	rss_section = "posts"
 
+[services]
+	[services.disqus]
+		shortname = 'murilouco-louco'
+
