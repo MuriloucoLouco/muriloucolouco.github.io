@@ -129,7 +129,7 @@
     },
     "datePublished": "2023-12-22",
     "description": "",
-    "wordCount":  854 ,
+    "wordCount":  1341 ,
     "mainEntityOfPage": "True",
     "dateModified": "2023-12-22",
     "image": {
@@ -327,11 +327,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <p><img src="/enem/c.png" alt="c"></p>
 <p>Esses parâmetros de cada questão são obtidos num pré-teste com alunos do terceiro ano do ensino médio. Segundo o INEP, 100 mil estudantes distribuídos por CEP para melhor amostragem. Eles fazem todo o cálculo de regressão.</p>
 <p>Depois das provas do ENEM de fato, alguns itens podem ter parâmetros de pré-teste diferentes do reais. Então, eles fazem uma recalibragem dos parâmetros para adequar com os candidatos ao ENEM. Essa última recalibragem é a que será usada nos cálculos de proficiência.</p>
-<p>A expressão que nos co</p>
-<p>Primeiro, resumindo como o TRI funciona: cada questão possui três parâmetros aa, bb e cc. O aluno também terá um número θθ associado com sua habilidade no que a questão pede. Elas juntas formam uma curva logística que descreve a probabilidade do candidato acertar a questão dada sua habilidade:</p>
-<p>P(acertar∣θ)=c+(1−c)1+exp⁡[−a(θ−b)]
-P(acertar∣θ)=c+1+exp<a href="1%e2%88%92c">−a(θ−b)</a>
-​ncerne aqui é:</p>
+<p>A expressão que nos co​ncerne aqui é:</p>
 <p>$$ E(\theta | x, \eta) = \frac{\int_\mathbb{R} \theta L(x | \eta)f(\theta)d\theta}{\int_\mathbb{R} L(x | \eta)f(\theta)d\theta}  $$</p>
 <p>Ok. Muita coisa para compreender. O $E(\theta | x, \eta)$ é, essencialmente, o valor esperado da sua &ldquo;nota&rdquo;, que é o $\theta$, sua proficiência naquela área, dado suas respostas (o vetor $x$) e os parâmetros pré-determinados ($\eta$).</p>
 <p>Para cálcular essa valor esperado, você precisa calcular essas integrais. $f(\theta)$ é a &ldquo;função a priori&rdquo;, basicamente uma curva normal:</p>
@@ -339,8 +335,14 @@ P(acertar∣θ)=c+1+exp<a href="1%e2%88%92c">−a(θ−b)</a>
 <p>E o $L(x | \eta)$ é um mistério baseado apenas no artigo do inep que eu li, mas baseado em outras fontes, é o produto de todas as probabilidades de acertar cada item:</p>
 <p>$$ L(x | \eta) = \prod_n P_n $$</p>
 <p>Onde $P_n$ é a probabilidade da pessoa ter acertado ou errado a enésima questão daquela área.</p>
-<p>A consequência clara disso, é que se as chances de acertar uma questão dado sua proficiência são baixas, isso vai refletir num valor menor de $L$ e consequentemente a nota não vai valer tanto. Porém, se sua proficiência é alta, essa nota vai valer normalmente.</p>
-<p>Essas &ldquo;notas&rdquo; $\theta$ estarão numa distribuição normal com média $0$ e desvio padrão $1$. Então, para obter sua nota real naquela área, é preciso fazer a conversão:</p>
+<blockquote>
+<p>Para deixar claro o que está ocorrendo: cada proficiência $\theta$ tem uma certa probabilidade associada com ela, que é o $L$. Digamos que eu acertei algumas 30 questões da prova; qual a probabilidade de alguém com proficiência $0$ ter acertado 30 questões? Muito baixa, então $L \approx 0$. Qual a probabilidade de alguém com proficiência $1000$ acertar só 30 questões? Também baixa, então também $L \approx 0$. Agora uma pessoa com proficiência $700$ tem alta probabilidade de acertar essas 30 questões (e errar as outras).</p>
+</blockquote>
+<blockquote>
+<p>A expressão $E(\theta | x, \eta)$ é, como eu disse antes, o valor esperado de $\theta$. Então cada $\theta$ tem uma probabilidade, e nós pegamos o valor mais provável, quem já estudou estatística vai reconhecer isso na integral.</p>
+</blockquote>
+<p>Outro efeito disso é que evitar chutes: você errou várias questões fáceis e acertou uma difícil, quanto ela vai &ldquo;valer&rdquo; na sua nota? A probabilidade de alguém com proficiência alta acertar a questão é de fato alta, mas esse valor será ofuscado no produto com as várias questões fáceis que você errou, porque alguém com proficiência alta não erraria elas. Então ela não ira contribuir muito para $L$ em valores altos (mas ainda vai valer mais do que marcar ela errado, é claro).</p>
+<p>Essas proficiências $\theta$ estarão numa distribuição normal com média $0$ e desvio padrão $1$. Então, para obter sua nota real naquela área, é preciso fazer a conversão:</p>
 <p>$$ \textbf{Nota} = 100\theta + 500 $$</p>
 <p>Para que a média seja $500$ e a desvio padrão seja $100$</p>
 <p>Por exemplo, assumindo que todas as questões tenham o mesmo parâmetro:</p>
@@ -359,6 +361,34 @@ P(acertar∣θ)=c+1+exp<a href="1%e2%88%92c">−a(θ−b)</a>
 </p>
 <p>Baseado nisso podemos obter milhares de coisas. Por exemplo, aqui eu extrai a relação de pontuação e nota do enem em matemática de 1000 candidatos:</p>
 <p><img src="/enem/mat.png" alt="Pontuação x Nota matemática"></p>
+<p>Veja que esse gráfico segue uma certa tendência, e que cada pontuação ($0-45$) tem sua nota média ($0-1000$) crescendo de forma linear. O desvio padrão de pontuações mais baixas é alto, enquanto para pontuações maiores é baixa.</p>
+<p>Podemos compilar todos esses dados num gráfico mais compacto:</p>
+<p><img src="/enem/mat2022.png" alt="Média + Desvio padrão"></p>
+<p>Basta agora pegar essas notas médias e usar como meus dados para 2023? Claro que não, porque cada ano as médias podem mudar. Por exemplo, 2022 teve uma média de notas consideravelmente mais alta que 2021:</p>
+<p><img src="/enem/mat2021.png" alt="2022 Vs 2021"></p>
+<p>Os conhecidos da estatística reconhecem que este é o velho problema do teorema central do limite. Podemos dizer que cada ano $n$ é uma amostra com média $\bar{x}_n$ e desvio padrão $s_n$. Essas médias e desvios padrão estão &ldquo;próximos&rdquo; da média &ldquo;verdadeira&rdquo; $\mu$ e desvio $\sigma$. O teorema então nos vai dizer que</p>
+<p>$$ \mu \approx \frac{\sum_n^N \bar{x}_n}{N} $$</p>
+<p>E</p>
+<p>$$ \sigma \approx \sqrt{n}s_{\bar{x}} $$</p>
+<p>Onde $s_{\bar{x}}$ é o erro padrão, ou seja, o desvio padrão das médias amostrais com a média &ldquo;verdadeira&rdquo;:</p>
+<p>$$ s_{\bar{x}} = \sqrt{\frac{\sum_n^N (\mu - \bar{x}_n)^2}{N}} $$</p>
+<p>O que eu fiz então foi obter dados dos últimos 5 anos e aplicar as fórmulas anteriores. Dessa forma, obtemos uma média aproximada e desvio aproximado para 2023, o que nos permitirá criar intevalos de confiança em torno da média. Por exemplo, para matemática temos:</p>
+<p><img src="/enem/media.png" alt="5 anos"></p>
+<p>O desvio padrão é alto, e esse é o preço a se pagar pela certeza da nota.</p>
+<h2 id="calculadora">Calculadora</h2>
+<p>Compilando todos os dados que eu obtive, eu fiz uma calculadorazinha bem simples que obtém sua média provável para 2023 baseado em suas notas, e um intervalo de confiança, que por padrão é $90%$. Também aproveitei e coloquei uma calculadora de média ponderada que merece um pouco de explicação:</p>
+<p>A média ponderada é essencialmente uma combinação linear das distribuições padrão de cada ano. A soma dessas quatro (cinco com a redação) variáveis aleatórias será também uma variável aleatória, e como todas são normais, a média ponderada também será uma distribuição normal. Os web-livros nos informam que a média dessa distribuição será, obviamente, a média ponderada das outras distribuições:</p>
+<p>$$\bar{X} = \frac{p_1\mu_1 + p_2\mu_2 + p_3\mu_3 + p_4\mu_4 + p_5\mu_5}{p_1+p_2+p_3+p_4+p_5} $$</p>
+<p>E o desvio padrão:</p>
+<p>$$ \sigma_{\bar{X}} = \sqrt{\sum_{n=1}^5\left(\frac{p_n}{p}\sigma_n\right)^2} $$</p>
+<p>Onde $p = p_1+p_2+p_3+p_4+p_5$ é a soma de todos os pesos.</p>
+<p>Link: <a href="https://muriloucolouco.github.io/calculadora" target="_blank">https://muriloucolouco.github.io/calculadora</a>
+
+
+
+<embed type="text/html" src="/calculadora" width="100%" height="600">
+
+</p>
 
   <hr>
 <div class="footer">
@@ -382,6 +412,7 @@ P(acertar∣θ)=c+1+exp<a href="1%e2%88%92c">−a(θ−b)</a>
   <ul>
     <li><a href="#como-o-tri-funciona">Como o TRI funciona?</a></li>
     <li><a href="#estimando-notas">Estimando notas</a></li>
+    <li><a href="#calculadora">Calculadora</a></li>
   </ul>
 </nav>
     </div>
