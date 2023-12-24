@@ -6,7 +6,7 @@ draft: false
 
 ## Como o TRI funciona?
 
-Primeiro, resumindo como o TRI funciona: cada questão possui três parâmetros $a$, $b$ e $c$. O aluno também terá um número $\theta$ associado com sua habilidade no que a questão pede. Elas juntas formam uma curva logística que descreve a probabilidade do candidato acertar a questão dada sua habilidade:
+Primeiro, resumindo como o TRI funciona: cada questão possui uma probabilidade de acertar em função da habilidade $\theta$, número este que descreve a proficiência do candidato em determinada área, como Matemática ou Ciências da Natureza. Essa probabilidade é uma função logística determinada por três parâmatros $a$, $b$ e $c$.
 
 $$ P(acertar | \theta) = c + \frac{(1-c)}{1+\exp[-a(\theta-b)]} $$
 
@@ -22,7 +22,7 @@ E por fim, $c$ é o parâmatro de assíntota, que descreve basicamente a probabi
 
 ![c](/enem/c.png)
 
-Esses parâmetros de cada questão são obtidos num pré-teste com alunos do terceiro ano do ensino médio. Segundo o INEP, 100 mil estudantes distribuídos por CEP para melhor amostragem. Eles fazem todo o cálculo de regressão.
+Esses parâmetros de cada questão são obtidos num pré-teste com alunos do terceiro ano do ensino médio. Segundo o INEP, 100 mil estudantes distribuídos por CEP para melhor amostragem. Com esses dados, é possivel fazer uma regressão linear para calibrar os três parâmetros de cada questão.
 
 Depois das provas do ENEM de fato, alguns itens podem ter parâmetros de pré-teste diferentes do reais. Então, eles fazem uma recalibragem dos parâmetros para adequar com os candidatos ao ENEM. Essa última recalibragem é a que será usada nos cálculos de proficiência.
 
