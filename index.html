@@ -309,7 +309,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
     
 </div>
 
-        Como o TRI funciona? Primeiro, resumindo como o TRI funciona: cada questão possui três parâmetros $a$, $b$ e $c$. O aluno também terá um número $\theta$ associado com sua habilidade no que a questão pede. Elas juntas formam uma curva logística que descreve a probabilidade do candidato acertar a questão dada sua habilidade:
+        Como o TRI funciona? Primeiro, resumindo como o TRI funciona: cada questão possui uma probabilidade de acertar em função da habilidade $\theta$, número este que descreve a proficiência do candidato em determinada área, como Matemática ou Ciências da Natureza. Essa probabilidade é uma função logística determinada por três parâmatros $a$, $b$ e $c$.
 $$ P(acertar | \theta) = c + \frac{(1-c)}{1+\exp[-a(\theta-b)]} $$
 O parâmetro $a$ é o de discriminação, ela determina o quão bom é essa questão em separar alunos que sabem ($P \approx 1$) e os que não sabem ($P \approx 0$).
         
