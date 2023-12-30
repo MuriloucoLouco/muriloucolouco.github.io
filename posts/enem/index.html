@@ -129,7 +129,7 @@
     },
     "datePublished": "2023-12-22",
     "description": "",
-    "wordCount":  1380 ,
+    "wordCount":  1576 ,
     "mainEntityOfPage": "True",
     "dateModified": "2023-12-22",
     "image": {
@@ -327,29 +327,39 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <p><img src="/enem/c.png" alt="c"></p>
 <p>Esses parâmetros de cada questão são obtidos num pré-teste com alunos do terceiro ano do ensino médio. Segundo o INEP, 100 mil estudantes distribuídos por CEP para melhor amostragem. Com esses dados, é possivel fazer uma regressão linear para calibrar os três parâmetros de cada questão.</p>
 <p>Depois das provas do ENEM de fato, alguns itens podem ter parâmetros de pré-teste diferentes do reais. Então, eles fazem uma recalibragem dos parâmetros para adequar com os candidatos ao ENEM. Essa última recalibragem é a que será usada nos cálculos de proficiência.</p>
-<p>A expressão que nos co​ncerne aqui é:</p>
-<p>$$ E(\theta | x, \eta) = \frac{\int_\mathbb{R} \theta L(x | \eta)f(\theta)d\theta}{\int_\mathbb{R} L(x | \eta)f(\theta)d\theta}  $$</p>
-<p>Ok. Muita coisa para compreender. O $E(\theta | x, \eta)$ é, essencialmente, o valor esperado da sua &ldquo;nota&rdquo;, que é o $\theta$, sua proficiência naquela área, dado suas respostas (o vetor $x$) e os parâmetros pré-determinados ($\eta$).</p>
-<p>Para cálcular essa valor esperado, você precisa calcular essas integrais. $f(\theta)$ é a &ldquo;função a priori&rdquo;, basicamente uma curva normal:</p>
-<p>$$ f(\theta) = \frac{e^{\frac{-x^2}{2}}}{\sqrt{2\pi}} $$</p>
-<p>E o $L(x | \eta)$ é um mistério baseado apenas no artigo do inep que eu li, mas baseado em outras fontes, é o produto de todas as probabilidades de acertar cada item:</p>
-<p>$$ L(x | \eta) = \prod_n P_n $$</p>
-<p>Onde $P_n$ é a probabilidade da pessoa ter acertado ou errado a enésima questão daquela área.</p>
+<h2 id="estatística-bayeasiana">Estatística bayeasiana</h2>
+<p>O ENEM usa estatística bayeasiana. A ideia é a seguinte: O ENEM sabe qual a probabilidade de acertar alguma questão dada uma proficiência: $P(acertar | \theta)$. O Objetivo agora é obter o inverso: Qual a probabilidade de uma pessoa ter essa proficiência dado os acertos: $P( \theta | acertos)$.</p>
+<p>A solução é o teorema de bayes:</p>
+<p>$$ P(A | B) = \frac{P(B | A) P(A)}{P(B)} $$</p>
+<p>Então aplicando essa fórmula para nosso problema:</p>
+<p>$$ P(\theta | acertos) = \frac{P(acertos | \theta) P(\theta)}{P(acertos)} $$</p>
+<p>O $P(acertos | \theta)$ é simples: A chance $P_n$ de acertar ou errar uma questão é simplesmente o $[P(acertar_n | \theta)]$ ou $[1-P(acertar_n | \theta)]$ no caso de erro. Então a probabilidade de todos os acertos e erros $P(acertos | \theta)$ é:</p>
+<p>$$ P(acertos | \theta) = \prod_n P_n$$</p>
+<p>A segunda parte parte é $P(\theta)$, a probabilidade de alguém ter essa proficiência. Estritamente matematicamente falando, é impossível obter uma expressão, e é aí que entra um dos princípios filosóficos bayesianos: nós simplesmente inventamos uma probabilidade, chamada função <em>a priori</em>. No caso, a que mais faz sentido é uma função normal, pois baseado em estudos prévios, as distribuições de habilidade se dão em uma distribuição normal:</p>
+<p>$$ P(\theta) = \frac{e^{\frac{-\theta^2}{2}}}{\sqrt{2\pi}} $$</p>
+<p><img src="/enem/apriori.png" alt="Função a priori"></p>
+<p>Já a última parte é $P(acertos)$, basicamente, a probabilidade de alguém aleatório acertar/errar essas exatas questões. A ideia é simplesmente integrar sobre o produto $P(acertos | \theta)P(\theta)$, pois esta será a probabilidade de alguém ter a proficiência $\theta$ e acertar as determinadas questões. Depois integramos sobre todas as possibilidades.</p>
+<p>Assim, a expressão que obtemos é:</p>
+<p>$$ P(\theta | acertos) = \frac{P(acertos | \theta) P(\theta)}{\int_\mathbb{R}P(acertos | \theta) P(\theta) d\theta} $$</p>
+<p>A nota do ENEM então é obtida por:</p>
+<p>$$ EAP(\theta | acertos) = \frac{\int_\mathbb{R}\theta P(acertos | \theta) P(\theta)d\theta}{\int_\mathbb{R}P(acertos | \theta) P(\theta) d\theta} $$</p>
+<p>$$= \frac{\int_\mathbb{R}\theta \left(\prod_n P_n\right) \frac{e^{\frac{-\theta^2}{2}}}{\sqrt{2\pi}}d\theta}{\int_\mathbb{R}\left(\prod_n P_n\right) \frac{e^{\frac{-\theta^2}{2}}}{\sqrt{2\pi}} d\theta}$$</p>
+<p>Ok. Muita coisa para compreender. O $EAP(\theta | acertos)$ é, essencialmente, o valor esperado do $\theta$, sua proficiência naquela área, dado suas respostas (o &ldquo;acertos&rdquo;).</p>
 <blockquote>
-<p>Para deixar claro o que está ocorrendo: cada proficiência $\theta$ tem uma certa probabilidade associada com ela, que é o $L$. Digamos que eu acertei algumas 30 questões da prova; qual a probabilidade de alguém com proficiência $0$ ter acertado 30 questões? Muito baixa, então $L \approx 0$. Qual a probabilidade de alguém com proficiência $1000$ acertar só 30 questões? Também baixa, então também $L \approx 0$. Agora uma pessoa com proficiência $700$ tem alta probabilidade de acertar essas 30 questões (e errar as outras).</p>
+<p>Para deixar claro o que está ocorrendo: cada proficiência $\theta$ tem uma certa probabilidade associada com ela, que é o $P(acertos | \theta)$, que eu vou chamar de $L$, do inglês <em>likelihood</em>. Digamos que eu acertei algumas 30 questões da prova; qual a probabilidade de alguém com proficiência $0$ ter acertado 30 questões? Muito baixa, então $L \approx 0$. Qual a probabilidade de alguém com proficiência $1000$ acertar só 30 questões? Também baixa, então também $L \approx 0$. Agora uma pessoa com proficiência $700$ tem alta probabilidade de acertar essas 30 questões (e errar as outras).</p>
 </blockquote>
 <blockquote>
-<p>A expressão $E(\theta | x, \eta)$ é, como eu disse antes, o valor esperado de $\theta$. Então cada $\theta$ tem uma probabilidade, e nós pegamos o valor mais provável, quem já estudou estatística vai reconhecer isso na integral.</p>
+<p>A expressão $EAP(\theta | acertos)$ é, como eu disse antes, o valor esperado de $\theta$. Então cada $\theta$ tem uma probabilidade, e nós pegamos o valor mais provável, quem já estudou estatística vai reconhecer isso na integral.</p>
 </blockquote>
 <p>Outro efeito disso é que evitar chutes: você errou várias questões fáceis e acertou uma difícil, quanto ela vai &ldquo;valer&rdquo; na sua nota? A probabilidade de alguém com proficiência alta acertar a questão é de fato alta, mas esse valor será ofuscado no produto com as várias questões fáceis que você errou, porque alguém com proficiência alta não erraria elas. Então ela não ira contribuir muito para $L$ em valores altos (mas ainda vai valer mais do que marcar ela errado, é claro).</p>
 <p>Essas proficiências $\theta$ estarão numa distribuição normal com média $0$ e desvio padrão $1$. Então, para obter sua nota real naquela área, é preciso fazer a conversão:</p>
-<p>$$ \textbf{Nota} = 100\theta + 500 $$</p>
+<p>$$ \textbf{Nota} = 100EAP + 500 $$</p>
 <p>Para que a média seja $500$ e a desvio padrão seja $100$</p>
 <p>Por exemplo, assumindo que todas as questões tenham o mesmo parâmetro:</p>
 <p>$$ P(acertar | \theta) = 0.1 + \frac{0.9}{1+\exp[-2\theta]} $$</p>
 <p>Se eu acertei, digamos, $30$ questões e errei $15$:</p>
-<p>$$ L(x | \eta) = P(\theta)^{30}(1-P(\theta))^{15} $$</p>
-<p>Então $E(\theta | x, \eta) \approx 0.3$, e a minha nota será $530$. Se eu acertasse todas as $45$, minha nota seria $773$. Aqui um gráfico com a relação de notas e pontuação, assumindo a probabilidade igual pra todas:</p>
+<p>$$ P(acertos | \theta) = P(\theta)^{30}(1-P(\theta))^{15} $$</p>
+<p>Então $EAP \approx 0.3$, e a minha nota será $530$. Se eu acertasse todas as $45$, minha nota seria $773$. Aqui um gráfico com a relação de notas e pontuação, assumindo a probabilidade igual pra todas:</p>
 <p><img src="/enem/notas.png" alt="notas"></p>
 <p>(Caso você seja uma pessoa infeliz que não entendeu o que eu disse, pode ler o próprio artigo do INEP que fala a mesma coisa que eu: <a href="https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/enem_procedimentos_de_analise.pdf" target="_blank">https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/enem_procedimentos_de_analise.pdf</a>
 )</p>
@@ -423,6 +433,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
       <nav id="TableOfContents">
   <ul>
     <li><a href="#como-o-tri-funciona">Como o TRI funciona?</a></li>
+    <li><a href="#estatística-bayeasiana">Estatística bayeasiana</a></li>
     <li><a href="#estimando-notas">Estimando notas</a></li>
     <li><a href="#calculadora">Calculadora</a></li>
   </ul>
