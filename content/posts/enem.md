@@ -26,31 +26,51 @@ Esses parâmetros de cada questão são obtidos num pré-teste com alunos do ter
 
 Depois das provas do ENEM de fato, alguns itens podem ter parâmetros de pré-teste diferentes do reais. Então, eles fazem uma recalibragem dos parâmetros para adequar com os candidatos ao ENEM. Essa última recalibragem é a que será usada nos cálculos de proficiência.
 
-A expressão que nos co​ncerne aqui é:
+## Estatística bayeasiana
 
-$$ E(\theta | x, \eta) = \frac{\int_\mathbb{R} \theta L(x | \eta)f(\theta)d\theta}{\int_\mathbb{R} L(x | \eta)f(\theta)d\theta}  $$
+O ENEM usa estatística bayeasiana. A ideia é a seguinte: O ENEM sabe qual a probabilidade de acertar alguma questão dada uma proficiência: $P(acertar | \theta)$. O Objetivo agora é obter o inverso: Qual a probabilidade de uma pessoa ter essa proficiência dado os acertos: $P( \theta | acertos)$.
 
-Ok. Muita coisa para compreender. O $E(\theta | x, \eta)$ é, essencialmente, o valor esperado da sua "nota", que é o $\theta$, sua proficiência naquela área, dado suas respostas (o vetor $x$) e os parâmetros pré-determinados ($\eta$).
+A solução é o teorema de bayes:
 
-Para cálcular essa valor esperado, você precisa calcular essas integrais. $f(\theta)$ é a "função a priori", basicamente uma curva normal:
+$$ P(A | B) = \frac{P(B | A) P(A)}{P(B)} $$
 
-$$ f(\theta) = \frac{e^{\frac{-x^2}{2}}}{\sqrt{2\pi}} $$
+Então aplicando essa fórmula para nosso problema:
 
-E o $L(x | \eta)$ é um mistério baseado apenas no artigo do inep que eu li, mas baseado em outras fontes, é o produto de todas as probabilidades de acertar cada item:
+$$ P(\theta | acertos) = \frac{P(acertos | \theta) P(\theta)}{P(acertos)} $$
 
-$$ L(x | \eta) = \prod_n P_n $$
+O $P(acertos | \theta)$ é simples: A chance $P_n$ de acertar ou errar uma questão é simplesmente o $[P(acertar_n | \theta)]$ ou $[1-P(acertar_n | \theta)]$ no caso de erro. Então a probabilidade de todos os acertos e erros $P(acertos | \theta)$ é:
 
-Onde $P_n$ é a probabilidade da pessoa ter acertado ou errado a enésima questão daquela área. 
+$$ P(acertos | \theta) = \prod_n P_n$$
 
-> Para deixar claro o que está ocorrendo: cada proficiência $\theta$ tem uma certa probabilidade associada com ela, que é o $L$. Digamos que eu acertei algumas 30 questões da prova; qual a probabilidade de alguém com proficiência $0$ ter acertado 30 questões? Muito baixa, então $L \approx 0$. Qual a probabilidade de alguém com proficiência $1000$ acertar só 30 questões? Também baixa, então também $L \approx 0$. Agora uma pessoa com proficiência $700$ tem alta probabilidade de acertar essas 30 questões (e errar as outras).
+A segunda parte parte é $P(\theta)$, a probabilidade de alguém ter essa proficiência. Estritamente matematicamente falando, é impossível obter uma expressão, e é aí que entra um dos princípios filosóficos bayesianos: nós simplesmente inventamos uma probabilidade, chamada função _a priori_. No caso, a que mais faz sentido é uma função normal, pois baseado em estudos prévios, as distribuições de habilidade se dão em uma distribuição normal:
 
-> A expressão $E(\theta | x, \eta)$ é, como eu disse antes, o valor esperado de $\theta$. Então cada $\theta$ tem uma probabilidade, e nós pegamos o valor mais provável, quem já estudou estatística vai reconhecer isso na integral.
+$$ P(\theta) = \frac{e^{\frac{-\theta^2}{2}}}{\sqrt{2\pi}} $$
+
+![Função a priori](/enem/apriori.png)
+
+Já a última parte é $P(acertos)$, basicamente, a probabilidade de alguém aleatório acertar/errar essas exatas questões. A ideia é simplesmente integrar sobre o produto $P(acertos | \theta)P(\theta)$, pois esta será a probabilidade de alguém ter a proficiência $\theta$ e acertar as determinadas questões. Depois integramos sobre todas as possibilidades.
+
+Assim, a expressão que obtemos é:
+
+$$ P(\theta | acertos) = \frac{P(acertos | \theta) P(\theta)}{\int_\mathbb{R}P(acertos | \theta) P(\theta) d\theta} $$
+
+A nota do ENEM então é obtida por:
+
+$$ EAP(\theta | acertos) = \frac{\int_\mathbb{R}\theta P(acertos | \theta) P(\theta)d\theta}{\int_\mathbb{R}P(acertos | \theta) P(\theta) d\theta} $$
+
+$$= \frac{\int_\mathbb{R}\theta \left(\prod_n P_n\right) \frac{e^{\frac{-\theta^2}{2}}}{\sqrt{2\pi}}d\theta}{\int_\mathbb{R}\left(\prod_n P_n\right) \frac{e^{\frac{-\theta^2}{2}}}{\sqrt{2\pi}} d\theta}$$
+
+Ok. Muita coisa para compreender. O $EAP(\theta | acertos)$ é, essencialmente, o valor esperado do $\theta$, sua proficiência naquela área, dado suas respostas (o "acertos").
+
+> Para deixar claro o que está ocorrendo: cada proficiência $\theta$ tem uma certa probabilidade associada com ela, que é o $P(acertos | \theta)$, que eu vou chamar de $L$, do inglês _likelihood_. Digamos que eu acertei algumas 30 questões da prova; qual a probabilidade de alguém com proficiência $0$ ter acertado 30 questões? Muito baixa, então $L \approx 0$. Qual a probabilidade de alguém com proficiência $1000$ acertar só 30 questões? Também baixa, então também $L \approx 0$. Agora uma pessoa com proficiência $700$ tem alta probabilidade de acertar essas 30 questões (e errar as outras).
+
+> A expressão $EAP(\theta | acertos)$ é, como eu disse antes, o valor esperado de $\theta$. Então cada $\theta$ tem uma probabilidade, e nós pegamos o valor mais provável, quem já estudou estatística vai reconhecer isso na integral.
 
 Outro efeito disso é que evitar chutes: você errou várias questões fáceis e acertou uma difícil, quanto ela vai "valer" na sua nota? A probabilidade de alguém com proficiência alta acertar a questão é de fato alta, mas esse valor será ofuscado no produto com as várias questões fáceis que você errou, porque alguém com proficiência alta não erraria elas. Então ela não ira contribuir muito para $L$ em valores altos (mas ainda vai valer mais do que marcar ela errado, é claro).
 
 Essas proficiências $\theta$ estarão numa distribuição normal com média $0$ e desvio padrão $1$. Então, para obter sua nota real naquela área, é preciso fazer a conversão:
 
-$$ \textbf{Nota} = 100\theta + 500 $$
+$$ \textbf{Nota} = 100EAP + 500 $$
 
 Para que a média seja $500$ e a desvio padrão seja $100$
 
@@ -60,9 +80,9 @@ $$ P(acertar | \theta) = 0.1 + \frac{0.9}{1+\exp[-2\theta]} $$
 
 Se eu acertei, digamos, $30$ questões e errei $15$:
 
-$$ L(x | \eta) = P(\theta)^{30}(1-P(\theta))^{15} $$
+$$ P(acertos | \theta) = P(\theta)^{30}(1-P(\theta))^{15} $$
 
-Então $E(\theta | x, \eta) \approx 0.3$, e a minha nota será $530$. Se eu acertasse todas as $45$, minha nota seria $773$. Aqui um gráfico com a relação de notas e pontuação, assumindo a probabilidade igual pra todas:
+Então $EAP \approx 0.3$, e a minha nota será $530$. Se eu acertasse todas as $45$, minha nota seria $773$. Aqui um gráfico com a relação de notas e pontuação, assumindo a probabilidade igual pra todas:
 
 ![notas](/enem/notas.png)
 
