@@ -80,7 +80,7 @@ $$ P(acertar | \theta) = 0.1 + \frac{0.9}{1+\exp[-2\theta]} $$
 
 Se eu acertei, digamos, $30$ questões e errei $15$:
 
-$$ P(acertos | \theta) = P(\theta)^{30}(1-P(\theta))^{15} $$
+$$ P(acertos | \theta) = P(acertar | \theta)^{30}(1-P(acertar | \theta))^{15} $$
 
 Então $EAP \approx 0.3$, e a minha nota será $530$. Se eu acertasse todas as $45$, minha nota seria $773$. Aqui um gráfico com a relação de notas e pontuação, assumindo a probabilidade igual pra todas:
 
