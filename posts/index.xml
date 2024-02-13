@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Site do Murilo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 22 Dec 2023 10:46:10 -0400</lastBuildDate><atom:link href="https://muriloucolouco.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Feb 2024 10:38:54 -0400</lastBuildDate><atom:link href="https://muriloucolouco.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sobre astronomia, astrolábios e um pouco de astrologia</title>
+      <link>https://muriloucolouco.github.io/posts/astrolabio/</link>
+      <pubDate>Mon, 12 Feb 2024 10:38:54 -0400</pubDate>
+      
+      <guid>https://muriloucolouco.github.io/posts/astrolabio/</guid>
+      <description>Sobre astronomia Uma breve introdução a esfera celeste Para começar, é fundamental compreender o conceito de uma esfera celeste. Nos tempos modernos, é entendido que a terra orbita o sol, e o sol orbita um buraco negro no centro da galáxia. Essa noção, apesar de precisa, não é útil para os propósitos da navegação. Por isso, iremos adotar uma teoria geocêntrica. A terra está parada, fixa, e os corpos celestes orbitam em torno dela.</description>
+    </item>
+    
     <item>
       <title>Uma análise estatística do ENEM</title>
       <link>https://muriloucolouco.github.io/posts/enem/</link>
