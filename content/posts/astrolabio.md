@@ -182,4 +182,45 @@ Mapear as estrelas também era importante para determinar sua latitude no mar. A
 
 Não sou historiador. A wikipédia tem um artigo muito maneiro detalhando a história caso seja seu interesse. Eu sou mais da ciência mesmo.
 
+Dito isso, vou colocar alguns documentos interessantes que encontrei enquanto estudava sobre o assunto. Todos estão disponíveis no site archive.org.
+
+Primeiro, em um livro espanhol de 1591, chamado "Compendio del arte de nauegar", mostra como era a visão da época sobre o universo:
+
+![Compendio del arte de nauegar](/astrolabio/compendio.png)
+
+O universo era como uma cebola. No núcleo, a Terra, coberta por água, depois ar. Logicamente, sobra o quarto elemento, o fogo, que ficava em cima do ar. Essas quatro camadas eram chamadas de parte "Elemental", da esfera (a cebola) do Universo.
+
+Depois disso, haviam mais dez camadas, chamadas de parte "Celeste". Elas eram feitas de acordo com o movimento de cada astro no espaço. Para eles, havia uma camada no céu dedicada a Lua, e acima dela, uma camada para Mercúrio. Cada uma girava independentemente uma da outra, e tinham um certo período de rotação.
+
+As três últimas camadas, Firmamento, Cristalino e Primeiro Móvel, se referem respectivamente a: camada das estrelas, a camada das "águas superiores" onde se apoia o firmamento, e a camada que movimenta todas as outras.
+
+Depois dessa cebola, existe o "Cielo Empireo", que é o paraíso cristão.
+
+Hoje em dia esse modelo geocêntrico simplesmente não funciona mais para os planetas. O sol de fato realiza uma orbita circular ao redor da Terra, se usarmos a Terra como referêncial. Mas os planetas não.
+
+![Compendio del arte de nauegar](/astrolabio/compendio2.png)
+
+Aqui já são mostrados as ferramentas usadas na navegação: Astrolábio e quadrante. Ambos podiam ser usados para medir a latitude do navegador. O quadrante é uma ferramenta no formato de um quarto de um círculo:
+
+![Quadrante 1](/astrolabio/ptolomeu.jpg)
+
+Existiam também versões gigantes para medidas mais precisas:
+
+![Quadrante 2](/astrolabio/mural.jpg)
+
+Que futuramente foi substituído pela Sextante, que tem vários ajustes para obter a medida de ângulo mais precisa possível:
+
+![Sextante](/astrolabio/sextant.jpg)
+
+Mas a ciência não era de toda rudimentar. Por exemplo, o livro "Tratado da sphera" (tradução portuguesa de Sphaera mundi de Joannes de Sacro Bosco, 1230), traz um exemplo de como podemos saber que a Terra é redonda, com direito a ilustrações de como as fases da lua funcionam:
+
+![Redondeza da Terra](/astrolabio/rendondeza.png)
+
+Ou seja, pessoas em diferentes latitudes do planeta veem o céu de forma diferente. As sombras em um mesmo horário eram diferentes, etc. A redondeza da Terra era conhecida antes de Cristo. Idem para o fato da lua ser uma esfera iluminada pelo sol.
+
+O geocentrismo não era absurdo. Na verdade, era a melhor teoria científica que tinham, considerando que para chegar no heliocentrismo foi necessário medidas muito precisas no movimento dos planetas, que mostraram trajetos impossíveis num modelo geocentrico. Apesar da revolução copernicana já ter começado em 1500, demorou até ser aceita pelo público, por ser uma mudança de paradigma muito grande, aliada com um pouco de religiosidade.
+
+Enfim, isso é tudo.
+
 Planejo escrever um post sobre a antiga arte da trigonometria esférica, e como todas as medidas que ensinei hoje podiam ser usadas na navegação, usando cálculos geometricos mais avançados.
+
