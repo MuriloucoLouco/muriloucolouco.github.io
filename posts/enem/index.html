@@ -17,7 +17,12 @@
 
 
 
-<script defer language="javascript" type="text/javascript" src="/js/bundle.min.2020802c65d7e4d9924ad9985d2b846f0731757a349489709cadd5d59c0a461e.js"></script>
+
+
+
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.14549c76bbc96f0af1574b0259efd70e52908cd36fb4d14ed3d290a1b6479eae.js"></script>
+
+
 
 
 
@@ -39,26 +44,17 @@
 
 
   
- 
-
- 
 
 
-  
-  
-  
- 
 
 
 
   
   
-    
-  
   
 
 
-
+<!-- Open Graph image and Twitter Card metadata -->
 
 <title itemprop="name">Murilouco - Uma análise estatística do ENEM</title>
 <meta property="og:title" content=Murilouco&#32;-&#32;Uma&#32;análise&#32;estatística&#32;do&#32;ENEM />
@@ -81,10 +77,7 @@
 <meta property="og:url" content="https://muriloucolouco.github.io/posts/enem/" />
 
 
-
-
-
-<meta property="og:updated_time" content=22012-22-10T1246:10:23-0400 />
+<meta property="og:updated_time" content="2023-12-22T10:46:10-04:00" />
 
 
 <link rel="sitemap" type="application/xml" title="Sitemap" href='https://muriloucolouco.github.io/sitemap.xml' />
@@ -93,8 +86,7 @@
 <meta name="googlebot" content="index,follow" />
 
 
-<meta name="twitter:site" content="" />
-<meta name="twitter:creator" content="" />
+
 <meta property="fb:admins" content="" />
 
 
@@ -106,48 +98,6 @@
 
 
 
- 
-
-
-<meta property="og:type" content="article" />
-<meta property="article:publisher" content="" />
-<meta property="og:article:published_time" content=22012-22-10T1246:10:23-0400 />
-<meta property="article:published_time" content=22012-22-10T1246:10:23-0400 />
-
-
-
-
-
-<script defer type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Article",
-    "headline": "Uma análise estatística do ENEM",
-    "author": {
-      "@type": "Person",
-      "name": "https:\/\/github.com\/MuriloucoLouco"
-    },
-    "datePublished": "2023-12-22",
-    "description": "",
-    "wordCount":  1580 ,
-    "mainEntityOfPage": "True",
-    "dateModified": "2023-12-22",
-    "image": {
-      "@type": "imageObject",
-      "url": ""
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Site do Murilo",
-      "logo": {
-        "@type": "imageObject",
-        "url": ""
-      }
-    }
-  }
-</script>
-
-
 
 <meta name="generator" content="Hugo 0.110.0">
 
@@ -155,7 +105,7 @@
     
     
 
-<link type="text/css" rel="stylesheet" href="/css/bundle.min.178e339ccb9acabffeebf9adbb0bb23c1ec0b72a2a50edee18a5007d4d5a68aa.css">
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
 
 
     
@@ -175,8 +125,10 @@
         --date-color: #515151;
         --table-border-color: #E5E5E5;
         --table-stripe-color: #F9F9F9;
-        --code-color: #bf616a;
+        --code-color: #000;
         --code-background-color: #E5E5E5;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
         --moon-sun-color: #FFF;
         --moon-sun-background-color: #515151;
     }
@@ -189,8 +141,10 @@
         --date-color: #9a9a9a;
         --table-border-color: #515151;
         --table-stripe-color: #202020;
-        --code-color: #ff7f7f;
-        --code-background-color: #393D47;
+        --code-color: #fff;
+        --code-background-color: #515151;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
     }
     body {
         background-color: var(--bkg-color);
@@ -239,6 +193,7 @@
 
             
                 
+                
                     <li class="heading">
                         <a href="/posts/">Posts</a>
                     </li>
@@ -247,7 +202,9 @@
             
             
                 
+                
             
+                
                 
             
         
@@ -276,7 +233,9 @@
 
 
 
-    <a target="_blank" class="social" title="RSS Feed" href="https://muriloucolouco.github.io//posts/index.xml">
+
+
+    <a target="_blank" class="social" title="RSS Feed" href="/posts/index.xml">
         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 1280.000000 1280.000000">
             <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="currentColor">
                 <path d="M2295 11929 c-284 -12 -642 -45 -707 -65 -17 -5 -18 -63 -18 -1039 0 -569 4 -1036 8 -1039 5 -3 74 6 153 19 510 86 1168 95 1789 25 1348 -153 2602 -677 3670 -1531 385 -308 820 -744 1126 -1129 842 -1060 1362 -2313 1514 -3650 70 -621 61 -1279 -25 -1789 -13 -79 -22 -148 -19 -153 3 -4 471 -8 1039 -8 l1035 0 5 23 c51 225 85 942 67 1419 -23 605 -77 1044 -198 1617 -294 1400 -927 2734 -1823 3846 -1043 1295 -2364 2259 -3909 2854 -1158 447 -2451 656 -3707 600z"/>
@@ -288,10 +247,12 @@
 
 
 
+
+
         <p class="footnote">
 powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
     <br>
-    &copy; 2024 Site do Murilo. All rights reserved.
+    &copy; 2025 Site do Murilo. All rights reserved.
 </p>
 
   </div>
@@ -300,20 +261,35 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
             <main class="content container">
                 <div class="post">
   <div class="info">
-    <h1 class="post-title">
-        <a href="https://muriloucolouco.github.io/posts/enem/">Uma análise estatística do ENEM</a>
-    </h1>
+  <h1 class="post-title">
+    <a href="https://muriloucolouco.github.io/posts/enem/">Uma análise estatística do ENEM</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2023-12-22T10:46:10-0400" class="post-date">
+        December 22, 2023
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>8 mins read</span>
+      </span>
+    </div>
+
     
-        <time datetime="2023-12-22T10:46:10-0400" class="post-date">
-            December 22, 2023
-        </time>
-    
-    
-    
-    
-    
-    
-    
+  </div>
+
+  
+  
+
+  
 </div>
 
   <h2 id="como-o-tri-funciona">Como o TRI funciona?</h2>
@@ -361,16 +337,14 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <p>$$ P(acertos | \theta) = P(acertar | \theta)^{30}(1-P(acertar | \theta))^{15} $$</p>
 <p>Então $EAP \approx 0.3$, e a minha nota será $530$. Se eu acertasse todas as $45$, minha nota seria $773$. Aqui um gráfico com a relação de notas e pontuação, assumindo a probabilidade igual pra todas:</p>
 <p><img src="/enem/notas.png" alt="notas"></p>
-<p>(Caso você seja uma pessoa infeliz que não entendeu o que eu disse, pode ler o próprio artigo do INEP que fala a mesma coisa que eu: <a href="https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/enem_procedimentos_de_analise.pdf" target="_blank">https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/enem_procedimentos_de_analise.pdf</a>
-)</p>
+<p>(Caso você seja uma pessoa infeliz que não entendeu o que eu disse, pode ler o próprio artigo do INEP que fala a mesma coisa que eu: <a href="https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/enem_procedimentos_de_analise.pdf" target="_blank">https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/enem_procedimentos_de_analise.pdf</a>)</p>
 <h2 id="estimando-notas">Estimando notas</h2>
 <p>Quero estimar minha nota do ENEM. Problema: é impossível eu obter os parâmetros de cada questão para eu calcular. Apesar disso, é fato que em geral as notas do ENEM por pontuação são mais ou menos consistentes: uma pessoa que acerta $30$ questões em humanas vai tirar $600 - 700$.</p>
 <p>Nosso método será simples: obter um intervalo de confiança de 99% para a nota do enem.</p>
 <p>Como visto anteriormente, a relação a nota de uma pessoa, dada uma certa pontuação, segue uma distribuição padrão. Isso simplifica nossos cálculos: vamos criar uma distribuição padrão que seja a média de, digamos, os últimos 5 anos do enem.</p>
 <p>Por exemplo, se as médias de notas de 2020, 2021 e 2022 para quem acertou $39$ questões sejam $880$, $910$, $900$, então a média das três seria $\approx 896$. Então se eu acertei $39$ questões em 2023, mesmo eu não sabendo nenhum dado da prova desse ano, eu posso estimar que vou tirar uma nota próxima de $896$.</p>
 <p>Mas não basta apenas obter a média. Como eu disse antes, eu quero um intervalo de notas, que eu tenha 99% de certeza de que minha nota vai cair dentro deste intervalo. Isso significa obter o desvio padrão $\sigma$ e calcular o intervalo $896 - 2.56\sigma, 896 + 2.56\sigma$ ($2.56$ é o número para um intervalo de 99% de confiança).</p>
-<p>Como vamos obter os dados? Bom, o INEP na verdade libera todos os dados: <a href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enem" target="_blank">https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enem</a>
-</p>
+<p>Como vamos obter os dados? Bom, o INEP na verdade libera todos os dados: <a href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enem" target="_blank">https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enem</a></p>
 <p>Baseado nisso podemos obter milhares de coisas. Por exemplo, aqui eu extrai a relação de pontuação e nota do enem em matemática de 1000 candidatos:</p>
 <p><img src="/enem/mat.png" alt="Pontuação x Nota matemática"></p>
 <p>Veja que esse gráfico segue uma certa tendência, e que cada pontuação ($0-45$) tem sua nota média ($0-1000$) crescendo de forma linear. O desvio padrão de pontuações mais baixas é alto, enquanto para pontuações maiores é baixa.</p>
@@ -397,11 +371,11 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <p>Link: <a href="https://muriloucolouco.github.io/calculadora" target="_blank">https://muriloucolouco.github.io/calculadora</a>
 
 
-
 <embed type="text/html" src="/calculadora" width="100%" height="600">
 
 </p>
 
+  
   <hr>
 <div class="footer">
     
