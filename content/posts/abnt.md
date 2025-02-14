@@ -69,6 +69,6 @@ Mas isso revela que esse meu mimimi não é por nada. A falta de acesso às norm
 
 Apesar disso, lendo a NBR 14724:2011, eu também notei que ela é muito "wordcentrica". Toda a documentação parece assumir que você está usando o Microsoft Word ou algo assim, e não detalha mais nada. É uma péssima padronização, de uma péssima empresa.
 
-QUAL A UNIDADE DE MEDIDA DA FONTE E DAS ENTRELINHAS, **CARALHO**? EU DEVO SIMPLESMENTE ASSUMIR? EU SOU OBRIGADO AS UNIDADES DE MEDIDA PADRÃO DO MICROSOFT WORD? **VÃO SE FODEREM**, INCOMPETENTES **FILHOS DA PUTA** QUE NÃO SABEM O QUE É PADRONIZAÇÃO. VOCÊS NEM SABEM O QUE SÃO PONTOS. COMO VOCÊS CONSEGUEM FRACASSAR NO SEU ÚNICO TRABALHO? MORRAM.
+QUAL A UNIDADE DE MEDIDA DA FONTE E DAS ENTRELINHAS, **CARALHO**? EU DEVO SIMPLESMENTE ASSUMIR? EU SOU OBRIGADO A USAR AS UNIDADES DE MEDIDA PADRÃO DO MICROSOFT WORD? **VÃO SE FODEREM**, INCOMPETENTES **FILHOS DA PUTA** QUE NÃO SABEM O QUE É PADRONIZAÇÃO. VOCÊS NEM SABEM O QUE SÃO PONTOS. COMO VOCÊS CONSEGUEM FRACASSAR NO SEU ÚNICO TRABALHO? MORRAM.
 
 Ah, e eu fiz o cálculo de quanto custaria para ter todo o kit de normas ABNT para você poder fazer seu TCC. Deu R$804,25. É. Não vou dizer onde *eu* consegui ler as normas, mas começa com library e termina com genesis.
